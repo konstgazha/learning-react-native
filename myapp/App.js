@@ -4,14 +4,13 @@ import {
   Text,
   View
 } from 'react-native';
+import HelloWorld from './components/HelloWorld';
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Hello World!
-        </Text>
+          <HelloWorld message="Hello World!"/>
       </View>
     );
   }
