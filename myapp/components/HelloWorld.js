@@ -12,6 +12,11 @@ export default class HelloWorld extends Component {
       showName: true
     }
   }
+
+  static defaultProps = {
+    message: 'Hi there!'
+  }
+
   render() {
     console.log('Hello');
     let name = this.state.showName ? this.state.name : 'None';

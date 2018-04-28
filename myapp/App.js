@@ -5,12 +5,14 @@ import {
   View
 } from 'react-native';
 import HelloWorld from './components/HelloWorld';
+import StyleStuff from './components/StyleStuff';
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-          <HelloWorld message="Hello World!"/>
+          <HelloWorld/>
+          <StyleStuff/>
       </View>
     );
   }
@@ -20,7 +22,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    // alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
