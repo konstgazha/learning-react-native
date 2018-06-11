@@ -2,10 +2,20 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableHighlight,
+  TouchableOpacity
 } from 'react-native';
 
 export default class StyleStuff extends Component {
+  onPress() {
+    console.log('Area pressed');
+  }
+
+  onPress2() {
+    console.log('Area 2 pressed');
+  }
+
   render() {
     return (
       <View>
@@ -13,12 +23,21 @@ export default class StyleStuff extends Component {
           <Text style={styles.myText}>New style</Text>
         </View>
         <View style={styles.container}>
-          <View style={styles.v1}>
-            <Text>View 1</Text>
-          </View>
-          <View style={styles.v2}>
-            <Text>View 2</Text>
-          </View>
+          <TouchableHighlight 
+            style={styles.v1} 
+            onPress={this.onPress}
+            underlayColor="#001f3f">
+            <View>
+              <Text>View 1</Text>
+            </View>
+          </TouchableHighlight>
+          <TouchableOpacity 
+            style={styles.v2}
+            onPress={this.onPress2}>
+            <View >
+              <Text>View 2</Text>
+            </View>
+          </TouchableOpacity>
           <View style={styles.v3}>
             <Text>View 3</Text>
           </View>
